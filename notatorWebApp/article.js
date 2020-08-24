@@ -1,5 +1,6 @@
 const {spawn} = require('child_process');
 let childPython = "";
+let newNotes;
 
 document.getElementById("submit").addEventListener("click", function() {
 
@@ -27,12 +28,20 @@ document.getElementById("submit").addEventListener("click", function() {
 
     let article = document.getElementById("articleInput").value;
 
+    let keywords = document.getElementById("keywords").value;
 
-    childPython = spawn('python', ['prepPythonForArticle.py', atype, get_url, wtype, article]);
+    childPython = spawn('python', ['prepPythonForArticle.py', atype, get_url, wtype, article, keywords]);
+
 
     childPython.stdout.on('data', (data) => {
-        console.log(`${data}`);
+        // console.log(`${data}`);
+        newNotes = new notes(data);
+
     });
+
+    // sessionStorage.setItem('userNotes', newNotes.getNotes());
+    console.log(typeof newNotes.fullNotes());
+    // newNotes.logNotes();
 
 
     // console.log(`${atype}`);

@@ -111,7 +111,7 @@ oneDArticle = [i for i in oneDArticle if i.lower() not in bannedWords] #FILTERIN
 
 
 #USE COUNTER CLASS TO FIND MOST COMMON WORDS IN THE ARTICLE
-numberOfKeywords = int(input("Number of Keywords: "))
+numberOfKeywords = int(sys.argv[5])
 counterArticle = Counter(oneDArticle)
 mostCommon = counterArticle.most_common(numberOfKeywords)
 mostCommon = np.array(mostCommon)
