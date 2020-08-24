@@ -1,0 +1,24 @@
+{
+  "name": "notatorApp",
+  "version": "1.0.0",
+  "description": "Creating GUI for notating project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/jdesai22/notatorApp",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "devDependencies": {
+    "electron": "^9.2.1"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "fs": "0.0.1-security"
+  }
+}

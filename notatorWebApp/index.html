@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta content="default-src 'self'; script-src 'self'" http-equiv="X-Content-Security-Policy">
+    <title>Notator</title>
+  </head>
+  <body>
+    <h1>Welcome to Notator</h1>
+    <h3>Your Path to Quick Notes</h3>
+    <br><br>
+    <label for = "articleInput">Enter Article Info Here:</label>
+    <br>
+    <textarea id = "articleInput" cols = "50" rows = "10"></textarea>
+    <br>
+    <input id = "submit" type = "submit">
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="article.js"></script>
+  </body>
+</html>
