@@ -11,12 +11,31 @@
     <h1>Welcome to Notator</h1>
     <h3>Your Path to Quick Notes</h3>
     <br><br>
-    <label for = "articleInput">Enter Article Info Here:</label>
-    <br>
-    <textarea id = "articleInput" cols = "50" rows = "10"></textarea>
-    <br>
-    <input id = "submit" type = "submit">
+    <form>
+      <input type="radio" name = "articleType" value="u" id = "url">
+      <label for = "url">Url</label><br>
+      <input type="radio" name = "articleType" value="c" id = "article">
+      <label for = "article">Article</label><br>
+      <br>
 
+      <label for = "get_url">Url to News Article</label>
+      <input type="text" name = "get_url" id = "get_url"><br>
+      <br>
+
+      <input  type ="radio" name = "webType" value = "npost" id = "npost">
+      <label for = "npost">New York Post</label><br>
+      <input  type ="radio" name = "webType" value = "ntimes" id = "ntimes">
+      <label for = "ntimes">New York Times</label><br>
+      <input  type ="radio" name = "webType" value = "wpost" id = "wpost">
+      <label for = "wpost">Washington Post</label><br>
+      <br>
+
+      <label for = "articleInput">Enter Article Info Here:</label>
+      <br>
+      <textarea id = "articleInput" cols = "50" rows = "10"></textarea>
+      <br>
+    </form>
+      <input id = "submit" type = "submit">
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
     <script src="article.js"></script>

@@ -3,21 +3,22 @@ import numpy as np
 from collections import Counter
 import requests
 from bs4 import BeautifulSoup as bs
+import sys
 
-source = str(input("[u]rl or [c]opy and paste: "))
+source = str(sys.argv[1]) #[u]rl or [c]opy and paste
 
 if source == "u":
-    get_url = str(input("Link to webpage: "))
-    webType = str(input("[n]ew york times or [w]ashington post or new [y]ork post: "))
+    get_url = str(sys.argv[2]) #link to webpage
+    webType = str(sys.argv[3]) #type of article: new york time, post, or washington post
 
     webpage = requests.get(get_url)
     webInfo = bs(webpage.text, 'html.parser')
 
-    if webType == "n":
+    if webType == "ntimes":
         results = webInfo.find_all('p', attrs={'class': 'css-158dogj'}) #NEW YORK TIMES
-    elif webType == "w":
+    elif webType == "wpost":
         results = webInfo.find_all('p', attrs={'class': 'font--body'}) #WASHINGTON POST
-    elif webType == "y":
+    elif webType == "npost":
         results = webInfo.find_all('div', attrs={'class': 'entry-content'}) #NEW YORK POST
 
     mainArticle = []
@@ -25,10 +26,11 @@ if source == "u":
         mainArticle.append(i.text)
 
 elif source == "c":
-    file = open("article.txt", "r", encoding="utf8")
-    mainArticle = file.readlines()
+    #file = open("article.txt", "r", encoding="utf8")
+    mainArticle = sys.argv[4]
 
-print(mainArticle)
+#print(mainArticle)
+
 lineCount = 0
 wordCount = 0
 charCount = 0
