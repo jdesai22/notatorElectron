@@ -6,11 +6,13 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta content="default-src 'self'; script-src 'self'" http-equiv="X-Content-Security-Policy">
     <title>Notator</title>
+    <link rel="stylesheet" type = "text/css" href="index.css">
   </head>
   <body>
     <h1>Welcome to Notator</h1>
     <h3>Your Path to Quick Notes</h3>
     <br><br>
+    <div id = "formArticle">
     <form>
       <input type="radio" name = "articleType" value="u" id = "url">
       <label for = "url">Url</label><br>
@@ -42,6 +44,12 @@
     <br>
 <!--    <a href="notes.html"><input id = "submit" type = "submit"></a>-->
     <input id = "submit" type = "submit">
+    </div>
+
+    <div id="notesArticle">
+      <p id = "notes"></p>
+      <input id = "return" type  = "submit" value = "Return">
+    </div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
     <script src = "notes.js"></script>

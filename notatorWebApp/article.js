@@ -1,6 +1,9 @@
 const {spawn} = require('child_process');
 let childPython = "";
 let newNotes;
+let form = document.getElementById("formArticle");
+let noteArticle = document.getElementById("notesArticle");
+
 
 document.getElementById("submit").addEventListener("click", function() {
 
@@ -36,17 +39,28 @@ document.getElementById("submit").addEventListener("click", function() {
     childPython.stdout.on('data', (data) => {
         // console.log(`${data}`);
         newNotes = new notes(data);
+        document.getElementById("notesArticle").innerHTML = decodeURI(`${newNotes.note}`);
+        newNotes.logNotes();
 
+
+        //let test = "";
+        // try{
+        // // If the string is UTF-8, this will work and not throw an error.
+        //     test=decodeURIComponent(escape(`${newNotes.note}`));
+        // }catch(e){
+        // // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
+        //     console.log("not normal")
+        // }
     });
 
-    // sessionStorage.setItem('userNotes', newNotes.getNotes());
-    console.log(typeof newNotes.fullNotes());
-    // newNotes.logNotes();
 
+    form.style.display = "none";
+    noteArticle.style.display = "block";
 
-    // console.log(`${atype}`);
-    // console.log(`${get_url}`);
-    // console.log(`${wtype}`);
-    // console.log(`${article}`);
 });
 
+
+document.getElementById("return").addEventListener("click", function () {
+    form.style.display = "block";
+    noteArticle.style.display = "none";
+})

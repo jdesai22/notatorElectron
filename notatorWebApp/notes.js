@@ -4,6 +4,7 @@ class notes {
         this.note = note;
     }
 
+
     get fullNotes() {
         return this.note;
     }
