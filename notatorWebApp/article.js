@@ -33,15 +33,15 @@ document.getElementById("submit").addEventListener("click", function() {
 
     let keywords = document.getElementById("keywords").value;
 
-    childPython = spawn('python', ['prepPythonForArticle.py', atype, get_url, wtype, article, keywords]);
+    form.style.display = "none";
 
+    childPython = spawn('python', ['prepPythonForArticle.py', atype, get_url, wtype, article, keywords]);
 
     childPython.stdout.on('data', (data) => {
         // console.log(`${data}`);
         newNotes = new notes(data);
         document.getElementById("notesArticle").innerHTML = decodeURI(`${newNotes.note}`);
         newNotes.logNotes();
-
 
         //let test = "";
         // try{
@@ -54,7 +54,7 @@ document.getElementById("submit").addEventListener("click", function() {
     });
 
 
-    form.style.display = "none";
+
     noteArticle.style.display = "block";
 
 });

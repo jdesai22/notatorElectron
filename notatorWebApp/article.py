@@ -1,2 +1,8 @@
 import sys
-print("input from user: ", sys.argv[1])
+mainArticle = []
+
+mainArticle = sys.argv[4].split()
+
+
+
+print("input from user: ", mainArticle)

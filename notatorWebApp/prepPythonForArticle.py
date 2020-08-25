@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup as bs
 import sys
 
 source = str(sys.argv[1]) #[u]rl or [c]opy and paste
+mainArticle = []
 
 if source == "u":
     get_url = str(sys.argv[2]) #link to webpage
@@ -21,14 +22,13 @@ if source == "u":
     elif webType == "npost":
         results = webInfo.find_all('div', attrs={'class': 'entry-content'}) #NEW YORK POST
 
-    mainArticle = []
+
     for i in results:
         mainArticle.append(i.text)
 
 elif source == "c":
     #file = open("article.txt", "r", encoding="utf8")
-    mainArticle = sys.argv[4]
-
+    mainArticle = sys.argv[4].split()
 #print(mainArticle)
 
 lineCount = 0
