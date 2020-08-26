@@ -176,6 +176,9 @@ print("\n\n Notes from Today: \n\n")
 for i in range(0, numberOfKeywords):
     print(keywords[i] + "\n")
     for l in keywordsLoc[i]:
+        newNotes = []
+        for m in sentences2d[l]:
+            print(m)
         fullNotes = " ".join(sentences2d[l])
         # outputNotes = []
         # badCharacters = ["'"]
@@ -183,12 +186,13 @@ for i in range(0, numberOfKeywords):
         #     if s != "'":
         #         outputNotes.append(s)
         # print("".join(outputNotes))
-        print(fullNotes)
+        #print(fullNotes)
         #print("".join(outputNotes))
         print("\n")
 
     print("-----------------------")
     print("\n")
+
 
 print("number that are bad :" + str(testing))
 # mainArticle = "'testing' this idea"
