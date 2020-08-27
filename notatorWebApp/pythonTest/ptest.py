@@ -171,40 +171,27 @@ for i in keywords:
     keywordsLoc.append(tempKeywordloc)
 
 #OUTPUT THE NOTES - CORNELL STYLE
-testing = 0
 print("\n\n Notes from Today: \n\n")
 for i in range(0, numberOfKeywords):
     print(keywords[i] + "\n")
     for l in keywordsLoc[i]:
-        newNotes = []
+        cleanNotes = []
+        badCharacters = [39]
         for m in sentences2d[l]:
-            print(m)
-        fullNotes = " ".join(sentences2d[l])
-        # outputNotes = []
-        # badCharacters = ["'"]
-        # for s in fullNotes:
-        #     if s != "'":
-        #         outputNotes.append(s)
-        # print("".join(outputNotes))
-        #print(fullNotes)
-        #print("".join(outputNotes))
-        print("\n")
+            cleanWord = []
+            for s in list(m):
+                if 43 < ord(s) < 60 or ord(s) == 63 or 64 < ord(s) < 94 or 96 < ord(s) < 122:
+                    cleanWord.append(s)
+
+            cleanNotes.append("".join(cleanWord))
+
+        fullNotes = " ".join(cleanNotes)
+        print(fullNotes)
+
+        # print("\n")
 
     print("-----------------------")
     print("\n")
-
-
-print("number that are bad :" + str(testing))
-# mainArticle = "'testing' this idea"
-#
-# wording = []
-#
-# badCharacters = ["'", "/"]
-# for i in mainArticle:
-#     if i not in badCharacters:
-#         wording.append(i)
-#
-# print("".join(wording))
 
 
 #GET ALL QUOTATIONS WITHIN THE ARTICLE
@@ -217,7 +204,7 @@ quotes = []
 
 #RECORDING WHERE QUOTATION MARKS ARE
 for i in allQuote:
-    if i == '"': #or i =="'" APOSTROPHES CAN BE ADDED BUT CONFUSING BECAUSE OF WORDS LIKE WON'T, ETC.
+    if i == '"' or ord(i) == 8220 or ord(i) == 8221 or ord(i) == 8223: #or i =="'" APOSTROPHES CAN BE ADDED BUT CONFUSING BECAUSE OF WORDS LIKE WON'T, ETC.
         indexQuote.append(l)
     l+=1
 
