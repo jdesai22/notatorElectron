@@ -22,7 +22,7 @@ white - FAF9F9
     grid-template-columns: 42.5% 42.5%;
     grid-gap: 5%;
     margin: 5%;
-    border: black solid 1px;
+
 }
 
 .formLeft {
@@ -38,3 +38,8 @@ white - FAF9F9
     width: 90%;
     height: 90%;
 }
+
+.partForm {
+    margin: 1%
+}
+

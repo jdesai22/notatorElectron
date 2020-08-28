@@ -23,37 +23,46 @@
       <div id = "formArticle">
 
         <form>
-        <input type="radio" name = "articleType" value="u" id = "url">
-        <label for = "url">Url</label><br>
-        <input type="radio" name = "articleType" value="c" id = "article">
-        <label for = "article">Article</label><br>
+          <div class = "partForm getArticleType">
+            <input type="radio" name = "articleType" value="u" id = "url">
+            <label for = "url">Url</label><br>
+            <input type="radio" name = "articleType" value="c" id = "article">
+            <label for = "article">Article</label><br>
+          </div>
         <br>
 
-        <label for = "get_url">Url to News Article</label>
-        <input type="text" name = "get_url" id = "get_url"><br>
+          <div class = "partForm getUrl">
+            <label for = "get_url">Url to News Article</label>
+            <input type="text" name = "get_url" id = "get_url"><br>
+          </div>
         <br>
 
-        <input  type ="radio" name = "webType" value = "npost" id = "npost">
-        <label for = "npost">New York Post</label><br>
-        <input  type ="radio" name = "webType" value = "ntimes" id = "ntimes">
-        <label for = "ntimes">New York Times</label><br>
-        <input  type ="radio" name = "webType" value = "wpost" id = "wpost">
-        <label for = "wpost">Washington Post</label><br>
+          <div class = "partForm">
+            <input  type ="radio" name = "webType" value = "npost" id = "npost">
+            <label for = "npost">New York Post</label><br>
+            <input  type ="radio" name = "webType" value = "ntimes" id = "ntimes">
+            <label for = "ntimes">New York Times</label><br>
+            <input  type ="radio" name = "webType" value = "wpost" id = "wpost">
+            <label for = "wpost">Washington Post</label><br>
+          </div>
         <br>
 
-
-        <label for ="keywords">Number of Keywords</label>
-        <input type = "text" name = "keywords" id = "keywords">
+          <div class = "partForm">
+            <label for ="keywords">Number of Keywords</label>
+            <input type = "text" name = "keywords" id = "keywords">
+          </div>
         </form>
 
 
       <br>
-      <input id = "submit" type = "submit">
+        <div class = "partForm">
+          <input id = "submit" type = "submit">
+        </div>
       </div>
 
       </div>
 
-      <div class = "formRight">
+      <div class = "formRight partForm">
         <label for = "articleInput">Enter Article Info Here:</label>
         <br>
         <textarea id = "articleInput"></textarea>
