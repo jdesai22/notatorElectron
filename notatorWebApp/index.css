@@ -1,7 +1,40 @@
+/*
+gray - 7C8483
+black - 2E2E3A
+white - FAF9F9
+ */
+
+
 #formArticle {
     display: block;
 }
 
 #notesArticle {
     display: none;
+}
+
+#container {
+    margin: 5%;
+}
+
+.formInput {
+    display: grid;
+    grid-template-columns: 42.5% 42.5%;
+    grid-gap: 5%;
+    margin: 5%;
+    border: black solid 1px;
+}
+
+.formLeft {
+    text-align: center;
+}
+
+.formRight {
+    text-align: center;
+}
+
+#articleInput {
+    resize: none;
+    width: 90%;
+    height: 90%;
 }

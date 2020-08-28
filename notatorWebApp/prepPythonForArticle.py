@@ -223,6 +223,8 @@ for i in range(0, int(len(indexQuote)/2)):
     quotes.append("".join(interQuote))
 
 #PRINT ALL QUOTES
-print("Quotes + <br>")
+print("Quotes <br>")
+print("<ul>")
 for i in quotes:
-    print(i + "<br>")
+    print("<li>" + i + "<br>" + "</li>")
+print('</ul>')
