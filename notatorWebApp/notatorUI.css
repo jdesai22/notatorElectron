@@ -27,10 +27,12 @@ body {
     font-size: 30px;
     border-radius: 15px;
     border: #FAF9F9 solid;
+    background-color: #2e2e3a;
+    transition:0.3s;
 }
 
-.question label :hover {
-
+.question label:hover {
+    background-color: #40404e;
 }
 
 input[type = "radio"] {
@@ -39,4 +41,10 @@ input[type = "radio"] {
 
 .userInput {
     /*padding: 2px;*/
+}
+
+.nextBtn {
+    float: right;
+    position:absolute;
+    button: 10px;
 }
