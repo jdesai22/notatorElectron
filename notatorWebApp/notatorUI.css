@@ -23,7 +23,7 @@ body {
 }
 
 .question label {
-    padding: 2% 80px;
+    padding: 2% 20%;
     font-size: 30px;
     border-radius: 15px;
     border: #FAF9F9 solid;
@@ -43,8 +43,16 @@ input[type = "radio"] {
     /*padding: 2px;*/
 }
 
-.nextBtn {
+.next {
     float: right;
+}
+
+.nextBtn {
     position:absolute;
-    button: 10px;
+    bottom: 2%;
+    right: 2%;
+    font-size: 20px;
+    padding: 2% 8%;
+    border-radius: 15px;
+    border: #FAF9F9 solid;
 }
