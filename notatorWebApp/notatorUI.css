@@ -22,7 +22,7 @@ body {
     margin-top: 15%;
 }
 
-.question label {
+.question label:not(.articleLabel) {
     padding: 2% 20%;
     font-size: 30px;
     border-radius: 15px;
@@ -31,7 +31,7 @@ body {
     transition:0.3s;
 }
 
-.question label:hover {
+.question label:not(.articleLabel):hover{
     background-color: #40404e;
 }
 
@@ -55,4 +55,43 @@ input[type = "radio"] {
     padding: 2% 8%;
     border-radius: 15px;
     border: #FAF9F9 solid;
+    background-color: #2e2e3a;
+    transition:0.3s;
+}
+
+.nextBtn:hover {
+    background-color: #40404e;
+}
+
+/*
+    PAGE 2Url CSS
+*/
+#page2u {
+    display: none;
+}
+
+.page2uquestion {
+    margin-top: 10%;
+}
+
+/*
+    PAGE 2Article CSS
+ */
+
+#page2a {
+    display: none;
+}
+
+.articleLabel {
+    padding: 2% 20%;
+    font-size: 30px;
+}
+
+#articleInput {
+
+    height: 75%;
+}
+
+.page2aquestion {
+    margin-top: 5%
 }

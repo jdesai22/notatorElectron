@@ -6,29 +6,90 @@
     <link rel = "stylesheet" href="notatorUI.css">
 </head>
 <body>
-    <div class = "heading">
-        <h1 class = "title">Notator</h1>
+
+    <div id = "page1">
+        <div class = "heading">
+            <h1 class = "title">Notator</h1>
+        </div>
+
+        <div class = "question">
+            <form>
+                <input name = "articleSource" id = "url" value = "u" type = "radio" class = "userInput">
+                <br>
+                <label for = "url" id = "idUrl">Website Link</label>
+
+                <br><br><br><br>
+
+                <input name = "articleSource" id="article" value = "c" type = "radio" class = "userInput">
+                <br>
+                <label for = "article" id = "idArticle">Copy and Paste Text</label>
+            </form>
+        </div>
+
+        <div class = "next">
+            <p class = "nextBtn" id = "nextBtn">
+                Next
+            </p>
+        </div>
     </div>
 
-    <div class = "question">
-        <form>
-            <input name = "articleSource" id = "url" value = "u" type = "radio" class = "userInput">
+
+
+    <div id = "page2u">
+        <div class = "heading">
+            <h1 class = "title">Notator</h1>
+        </div>
+
+        <div class = "question page2uquestion">
+            <form>
+                <input name = "webSource" id = "npost" value = "y" type = "radio" class = "userInput">
+                <br>
+                <label for = "npost" id = "idnpost">New York Post</label>
+
+                <br><br><br><br>
+
+                <input name = "webSource" id="ntimes" value = "n" type = "radio" class = "userInput">
+                <br>
+                <label for = "ntimes" id = "idntimes">New York Times</label>
+
+                <br><br><br><br>
+
+                <input name = "webSource" id="wpost" value = "w" type = "radio" class = "userInput">
+                <br>
+                <label for = "wpost" id = "idwpost">Copy and Paste Text</label>
+            </form>
+        </div>
+
+        <div class = "next">
+            <p class = "nextBtn" id = "nextBtn1u">
+                Next
+            </p>
+        </div>
+    </div>
+
+
+    <div id = "page2a">
+        <div class = "heading">
+            <h1 class = "title">Notator</h1>
+        </div>
+
+        <div class = "question page2aquestion">
+            <label for = "articleInput" class = "articleLabel">Enter Article Here</label>
+
             <br>
-            <label for = "url" id = "idUrl">Website Link</label>
 
-            <br><br><br><br>
+            <textarea id = "articleInput" class = "userInput" data-attr = "textArea" cols = "90" rows = "23">
 
-            <input name = "articleSource" id="article" value = "c" type = "radio" class = "userInput">
-            <br>
-            <label for = "article" id = "idArticle">Copy and Paste Text</label>
-        </form>
+            </textarea>
+        </div>
+
+        <div class = "next">
+            <p class = "nextBtn" id = "nextBtn1a">
+                Next
+            </p>
+        </div>
     </div>
 
-    <div class = "next">
-        <p class = "nextBtn" id = "nextBtn">
-            Next
-        </p>
-    </div>
 
     <script src = "notatorUI.js"></script>
 </body>
