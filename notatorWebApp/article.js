@@ -40,7 +40,8 @@ document.getElementById("submit").addEventListener("click", function() {
     childPython.stdout.on('data', (data) => {
         // console.log(`${data}`);
         newNotes = new notes(data);
-        document.getElementById("notes").innerHTML = decodeURI(`${newNotes.note}`);
+        // document.getElementById("notes").innerHTML = decodeURI(`${newNotes.note}`);
+        document.getElementById("notes").innerHTML = newNotes.note.toString('utf8');
         newNotes.logNotes();
 
         //let test = "";

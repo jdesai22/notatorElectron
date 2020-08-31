@@ -153,8 +153,15 @@ let backbtn3 = document.getElementById("backbtn3");
 let nextBtn3 = document.getElementById("nextBtn3");
 
 backbtn3.addEventListener("click", function () {
-    page4.style.display = "none";
-    page3.style.display = "block";
+    if (atype == "c") {
+        page4.style.display = "none";
+        page2a.style.display = "block";
+    } else if (atype == "u") {
+        page4.style.display = "none";
+        page3.style.display = "block";
+    }
+
+
 })
 
 nextBtn3.addEventListener("click", function () {
@@ -163,4 +170,15 @@ nextBtn3.addEventListener("click", function () {
 })
 
 //notespage
+let againbtn = document.getElementById("nextBtn4");
+let backbtn4 = document.getElementById("backbtn4");
 
+againbtn.addEventListener("click",function () {
+    notesPage.style.display = "none";
+    page1.style.display = "block";
+})
+
+backbtn4.addEventListener("click", function () {
+    notesPage.style.display = "none";
+    page4.style.display = "block";
+})
