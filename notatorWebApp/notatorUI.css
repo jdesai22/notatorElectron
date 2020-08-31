@@ -63,6 +63,23 @@ input[type = "radio"] {
     background-color: #40404e;
 }
 
+.backBtn {
+    position:absolute;
+    bottom: 2%;
+    left: 2%;
+    font-size: 20px;
+    padding: 2% 8%;
+    border-radius: 15px;
+    border: #FAF9F9 solid;
+    background-color: #2e2e3a;
+    transition:0.3s;
+}
+
+.backBtn:hover {
+    background-color: #40404e;
+}
+
+
 /*
     PAGE 2Url CSS
 */
@@ -73,6 +90,8 @@ input[type = "radio"] {
 .page2uquestion {
     margin-top: 10%;
 }
+
+
 
 /*
     PAGE 2Article CSS
@@ -94,4 +113,25 @@ input[type = "radio"] {
 
 .page2aquestion {
     margin-top: 5%
+}
+
+.textarea {
+    padding: 2%;
+    background-color: #2e2e3a;
+    color: #FAF9F9;
+}
+
+/*
+    PAGE 3 CSS
+ */
+
+#page3 {
+    display: none;
+}
+
+.linkInput {
+    border-radius: 15px;
+    margin-top: 10%;
+    width: 80%;
+    font-size: 60px;
 }
