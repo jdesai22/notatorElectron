@@ -16,6 +16,8 @@ article.addEventListener("click", function () {
 let page2u = document.getElementById("page2u");
 let page2a = document.getElementById("page2a");
 let page3 = document.getElementById("page3");
+let page4 = document.getElementById("page4");
+let notesPage = document.getElementById("notesPage");
 let atype;
 
 document.getElementById("nextBtn").addEventListener("click", function () {
@@ -116,6 +118,7 @@ nextbtn1u.addEventListener("click", function () {
 //page2a
 let articleInput = document.getElementById("articleInput");
 let backbtn1a = document.getElementById("backbtn1a");
+let nextbtn1a = document.getElementById("nextBtn1a");
 
 articleInput.addEventListener("click", function () {
     articleInput.style.border = "#FAF9F9 solid";
@@ -126,11 +129,38 @@ backbtn1a.addEventListener("click", function () {
     page2a.style.display = "none";
 })
 
+nextbtn1a.addEventListener("click", function () {
+    page2a.style.display = "none";
+    page4.style.display = "block";
+})
+
 //page3
 let backbtn2 = document.getElementById("backbtn2");
-
+let nextbtn2 = document.getElementById("nextBtn2");
 
 backbtn2.addEventListener("click", function () {
     page3.style.display = "none";
     page2u.style.display = "block";
 })
+
+nextbtn2.addEventListener("click", function () {
+    page3.style.display = "none";
+    page4.style.display = "block";
+})
+
+//page4
+let backbtn3 = document.getElementById("backbtn3");
+let nextBtn3 = document.getElementById("nextBtn3");
+
+backbtn3.addEventListener("click", function () {
+    page4.style.display = "none";
+    page3.style.display = "block";
+})
+
+nextBtn3.addEventListener("click", function () {
+    page4.style.display = "none";
+    notesPage.style.display = "block";
+})
+
+//notespage
+

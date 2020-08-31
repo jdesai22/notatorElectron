@@ -133,5 +133,33 @@ input[type = "radio"] {
     border-radius: 15px;
     margin-top: 10%;
     width: 80%;
-    font-size: 60px;
+    font-size: 20px;
+}
+
+/*
+    PAGE 4 CSS
+ */
+
+#page4 {
+    display: none;
+}
+
+#idcompkey {
+    margin-top: 10%;
+}
+
+.page4question {
+    margin-top: 10%;
+}
+
+/*#keyInput {*/
+/*    width: 40%;*/
+/*}*/
+
+/*
+    NOTES PAGE CSS
+ */
+
+#notesPage {
+    display: none;
 }
