@@ -151,6 +151,20 @@ nextbtn2.addEventListener("click", function () {
 //page4
 let backbtn3 = document.getElementById("backbtn3");
 let nextBtn3 = document.getElementById("nextBtn3");
+let compkey = document.getElementById("idcompkey");
+let userkey  = document.getElementById("iduserkey");
+
+compkey.addEventListener("click", function () {
+    userkey.style.backgroundColor = "#2e2e3a";
+    compkey.style.backgroundColor = "#40404e";
+})
+
+userkey.addEventListener("click", function () {
+    userkey.style.backgroundColor = "#40404e";
+    compkey.style.backgroundColor = "#2e2e3a";
+})
+
+
 
 backbtn3.addEventListener("click", function () {
     if (atype == "c") {
@@ -160,8 +174,6 @@ backbtn3.addEventListener("click", function () {
         page4.style.display = "none";
         page3.style.display = "block";
     }
-
-
 })
 
 nextBtn3.addEventListener("click", function () {
