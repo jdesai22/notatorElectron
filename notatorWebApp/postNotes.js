@@ -40,6 +40,7 @@ post.addEventListener("click", function() {
         // document.getElementById("notes").innerHTML = newNotes.note.toString('utf8');
         // newNotes.logNotes();
         // console.log(newNotes.note.toString('utf8'));
+        console.log(`${data}`);
         console.log("5");
         //let test = "";
         // try{
