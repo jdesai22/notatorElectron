@@ -7,6 +7,7 @@ import sys
 
 source = str(sys.argv[1]) #[u]rl or [c]opy and paste
 mainArticle = []
+results = []
 
 if source == "u":
     get_url = str(sys.argv[2]) #link to webpage

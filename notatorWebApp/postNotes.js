@@ -1,5 +1,4 @@
 const {spawn} = require('child_process');
-let childPython = "";
 let post = document.getElementById("nextBtn3");
 
 post.addEventListener("click", function() {
@@ -29,18 +28,18 @@ post.addEventListener("click", function() {
 
     console.log("2");
 
-    childPython = spawn('python', ['prepPythonForArticle.py', atype, url, uSource, fullArticle, keywords]);
+    let childPython = spawn('python', ['prepPythonForArticle.py', atype, url, uSource, fullArticle, keywords]);
 
     console.log("3");
 
     childPython.stdout.on('data', (data) => {
         // console.log(`${data}`);
-        let newNotes = new notes(data);
+        // let newNotes = new notes(data);
         console.log("4");
         // document.getElementById("notes").innerHTML = decodeURI(`${newNotes.note}`);
         // document.getElementById("notes").innerHTML = newNotes.note.toString('utf8');
         // newNotes.logNotes();
-        console.log(newNotes.note.toString('utf8'));
+        // console.log(newNotes.note.toString('utf8'));
         console.log("5");
         //let test = "";
         // try{
@@ -50,6 +49,10 @@ post.addEventListener("click", function() {
         // // If it isn't, an error will be thrown, and we can assume that we have an ISO string.
         //     console.log("not normal")
         // }
+    });
+
+    childPython.stderr.on('data', data => {
+        console.error(`child stderr:\n${data}`);
     });
 
     console.log("6");
