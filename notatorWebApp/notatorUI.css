@@ -45,9 +45,16 @@ input[type = "radio"] {
 
 .next {
     float: right;
+    width: 50%
 }
 
-.nextBtn:not(.lastBtn) {
+.back {
+    float:left;
+    width: 50%
+}
+
+
+.nextBtn {
     position:absolute;
     bottom: 2%;
     right: 2%;
@@ -162,34 +169,4 @@ input[type = "radio"] {
 
 #notesPage {
     display: none;
-    position:relative;
-}
-
-#backbtn4 {
-    position:fixed;
-     left: 2%;
-     font-size: 20px;
-    bottom:0;
-     padding: 2% 8%;
-     border-radius: 15px;
-     border: #FAF9F9 solid;
-     background-color: #2e2e3a;
-     transition:0.3s;
-}
-
-#nextBtn4 {
-    position:fixed;
-     right: 2%;
-    bottom: 0;
-     font-size: 20px;
-     padding: 2% 8%;
-     border-radius: 15px;
-     border: #FAF9F9 solid;
-     background-color: #2e2e3a;
-     transition:0.3s;
-}
-
-
-.lastBtn:hover {
-    background-color: #40404e;
 }
