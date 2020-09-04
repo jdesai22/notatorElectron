@@ -15,6 +15,7 @@ post.addEventListener("click", function() {
         for (let i = 0; i < urlSource.length; i++ ) {
             if (urlSource[i].checked) {
                 uSource = urlSource[i].value;
+                console.log(uSource);
                 break;
             }
         }
@@ -37,7 +38,7 @@ post.addEventListener("click", function() {
         // let newNotes = new notes(data);
         console.log("4");
         // document.getElementById("notes").innerHTML = decodeURI(`${newNotes.note}`);
-        // document.getElementById("notes").innerHTML = newNotes.note.toString('utf8');
+        document.getElementById("notes").innerHTML = data.toString('utf8');
         // newNotes.logNotes();
         // console.log(newNotes.note.toString('utf8'));
         console.log(`${data}`);

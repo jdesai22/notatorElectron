@@ -30,6 +30,7 @@ if source == "u":
 elif source == "c":
     #file = open("article.txt", "r", encoding="utf8")
     mainArticle = sys.argv[4].split()
+
 #print(mainArticle)
 
 lineCount = 0
