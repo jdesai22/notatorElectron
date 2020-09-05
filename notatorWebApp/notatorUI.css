@@ -50,7 +50,7 @@ input[type = "radio"] {
 
 .back {
     float:left;
-    width: 50%
+    /*width: 50%*/
 }
 
 
@@ -169,4 +169,19 @@ input[type = "radio"] {
 
 #notesPage {
     display: none;
+}
+
+.notesMain {
+    z-index: 1;
+    margin-bottom: 120px;
+}
+
+.notesBtn {
+    z-index: -1;
+    width: 50%;
+    border: none;
+}
+
+.lastBtn {
+    position:fixed;
 }

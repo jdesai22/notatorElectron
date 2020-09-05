@@ -183,7 +183,7 @@ for i in range(0, numberOfKeywords):
         for m in sentences2d[l]:
             cleanWord = []
             for s in list(m):
-                if 43 < ord(s) < 60 or ord(s) == 63 or 64 < ord(s) < 94 or 96 < ord(s) < 122:
+                if 43 < ord(s) < 60 or ord(s) == 63 or 64 < ord(s) < 94 or 96 < ord(s) < 123:
                     cleanWord.append(s)
 
             cleanNotes.append("".join(cleanWord))
