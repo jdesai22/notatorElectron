@@ -8,6 +8,7 @@ import sys
 source = str(sys.argv[1]) #[u]rl or [c]opy and paste
 mainArticle = []
 results = []
+title = str(sys.argv[2])
 
 if source == "u":
     get_url = str(sys.argv[2]) #link to webpage
@@ -211,16 +212,26 @@ quotes = []
 #FIX QUOTATION BUGS REMOVE BAD PUNCTUATION AND HOW QUOTES ARE FOUND
 #LIKE CHECK FOR TWO SINGLE QUOTES IN A ROW
 for i in allQuote:
-    if i == '"' or ord(i) == 8220 or ord(i) == 8221 or ord(i) == 8223: #or i =="'" APOSTROPHES CAN BE ADDED BUT CONFUSING BECAUSE OF WORDS LIKE WON'T, ETC.
+    if i == '"' or ord(i) == 8220 or ord(i) == 8221: #or i =="'" APOSTROPHES CAN BE ADDED BUT CONFUSING BECAUSE OF WORDS LIKE WON'T, ETC.
         indexQuote.append(l)
     l+=1
+
+# 8220 = double left quote
+# 8221 = right double quote
+# 8217 = apostrophe
 
 #GETTING INFO BETWEEN THE RECORDED LOCATIONS OF QUOTATION MARKS
 for i in range(0, int(len(indexQuote)/2)):
     interQuote = []
 
     for s in allQuote[indexQuote[i*2]:indexQuote[(2*i)+1]+1]:#ADDITIONAL OPERATIONS SO THAT IT GOES TO APPROPRIATE QUOTATIONS
-        interQuote.append(s)
+        if ord(s) == 8220 or ord(s) == 8221:
+            interQuote.append(chr(34))
+        elif ord(s) == 8217:
+            interQuote.append(chr(39))
+        else:
+            interQuote.append(s)
+
 
     quotes.append("".join(interQuote))
 
